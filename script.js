@@ -19,13 +19,13 @@ for (let i = 0; i < todoList.length; i++) {
     const {name, dueDate} = todoObject;
 
     const html = `
-   <p>
-    ${name} ${dueDate}
+    <div>${name}</div> 
+    <div>${dueDate}</div>
     <button onClick="
         todoList.splice(${i}, 1);
         renderTodoList();
     ">Delete</button> 
-    </p>
+
     `;
     todoListHtml += html;
 
@@ -42,7 +42,7 @@ function addTodo() {
     const inputElement = document.querySelector('.js-name-input')
     const name  = inputElement.value;
 
-    const deleteInputElement = document.querySelector('.js-date-input');
+    const deleteInputElement = document.querySelector('.js-due-date-input');
     const dueDate = deleteInputElement.value;
 
     
